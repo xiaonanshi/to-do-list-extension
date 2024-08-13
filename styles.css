@@ -1,0 +1,206 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 350px;
+    padding: 0 10px 10px; /* Adjust padding to avoid background */
+    background-color: transparent; /* Remove background */
+    border-radius: 0; /* Remove rounded corners */
+    box-shadow: none; /* Remove shadow */
+}
+
+/* Tab styles */
+.tabs {
+    display: flex;
+    margin-bottom: 0px; /* Reduce gap */
+    border-bottom: 1px solid #D9D9D9; /* Neutral Grey */
+}
+
+.tab-button {
+    flex: 1;
+    padding: 10px 0;
+    cursor: pointer;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.3s, color 0.3s;
+    color: lightgrey;
+}
+.tabs button:hover {
+    color: white;
+}
+.tab-button.active {
+    border-color: #2C6E49; /* Dark Green */
+    color: #2C6E49;
+}
+
+.tab-content {
+    padding-top: 5px; /* Reduce top padding */
+}
+
+.tab-content.active {
+    display: block;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+select {
+    width: 25%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #D9D9D9; /* Neutral Grey */
+    background-color: #fff;
+}
+
+input[type="text"] {
+    width: 60%;
+    padding: 8px;
+    margin-left: 10px;
+    border-radius: 4px;
+    border: 1px solid #D9D9D9; /* Neutral Grey */
+    background-color: #fff;
+}
+
+/* Modern Button Styles */
+button {
+    padding: 10px 15px; /* Slightly larger padding for a more comfortable click area */
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    background-color: #2C6E49; /* Dark Green */
+    color: #fff;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-size: 14px; /* Slightly larger font size for readability */
+}
+
+button:hover {
+    background-color: #88D18A; /* Light Green */
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow on hover */
+}
+
+#add-task-button {
+    width: 15%;
+    margin-left: 10px;
+}
+
+#add-current-page-button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #D9D9D9; /* Neutral Grey */
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    word-break: break-word; /* Break long words */
+    white-space: normal; /* Allow multiline text */
+}
+
+li:hover {
+    background-color: #F4EBD9; /* Light Brown */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: grey;
+}
+
+a, span {
+    flex-grow: 1;
+    text-align: left;
+    word-break: break-word; /* Break long words */
+    white-space: normal; /* Allow multiline text */
+}
+
+.task-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.edit-button, .finish-button {
+    font-size: 12px;
+    padding: 2px 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #2C6E49; /* Dark Green */
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.edit-button:hover, .finish-button:hover {
+    color: #88D18A; /* Light Green */
+}
+
+.editable {
+    padding: 2px;
+    width: calc(100% - 50px);
+    border-bottom: 1px solid #2C6E49; /* Dark Green */
+    outline: none;
+    white-space: normal; /* Allow multiline text */
+}
+
+.dragging {
+    opacity: 0.5;
+    background-color: #D9D9D9; /* Neutral Grey */
+}
+
+/* Add styles for the completed header */
+.completed-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Expand and collapse the list when click list heading */
+.collapsed {
+    display: none;
+}
+
+/* Change cursor to pointer and add hover effect for headings */
+#today-tasks h2, #later-tasks h2, .completed-header h2 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+#today-tasks h2:hover, #later-tasks h2:hover, .completed-header h2:hover {
+    background-color: #E8FAEA;
+}
+
+/* Highlight heading when a task is dragged over */
+.drag-over {
+    background-color: #E8FAEA;
+}

@@ -1,0 +1,21 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+# Ignore node_modules
+node_modules/
+
+# Ignore build output
+build/
+
+# Ignore any logs
+*.log
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+

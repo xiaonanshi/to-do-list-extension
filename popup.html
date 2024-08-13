@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="tabs">
+    <button class="tab-button active" id="tasks-tab-button">Tasks</button>
+    <button class="tab-button" id="completed-tab-button">Completed</button>
+</div>
+<div class="tab-content active" id="tasks-tab">
+    <div id="today-tasks">
+        <h2>Today</h2>
+        <ul id="task-list-today"></ul>
+    </div>
+    <div id="later-tasks">
+        <h2>Later</h2>
+        <ul id="task-list-later"></ul>
+    </div>
+    <form id="add-task-form">
+        <div class="input-container">
+            <select id="task-category">
+                <option value="today">Today</option>
+                <option value="later">Later</option>
+            </select>
+            <input type="text" id="task-input" placeholder="Add a new task">
+            <button id="add-task-button" type="submit">Add</button>
+        </div>
+        <button id="add-current-page-button">Add Current Page</button>
+    </form>
+</div>
+<div class="tab-content" id="completed-tab">
+    <div class="completed-header">
+        <h2>Completed</h2>
+        <button id="delete-completed-tasks-button" title="Delete completed tasks">Delete Completed</button>
+    </div>
+    <ul id="task-list-completed"></ul>
+</div>
+<script src="popup.js"></script>
+</body>
+</html>
